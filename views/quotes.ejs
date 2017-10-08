@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>"Quoting" Dojo</title>
+    </head>
+    <body>
+        <h1>Here are the awesome quotes!</h1>
+        <% for (var quote of quotes) { %>
+            <h3>"<%= quote.quote %>"</h3>
+            <% var date = new Date(quote.createdAt) %>
+                <p>- <%= quote.name %> on <%= date.toUTCString() %></p>
+            <hr>
+        <% } %>
+        <p><a href="/">Back</a></p>
+    </body>
+</html>
